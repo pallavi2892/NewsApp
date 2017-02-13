@@ -11,9 +11,12 @@ window.onload = function() {
 // //this is for displaying on webpage
 // for (var i = storedNames.length; i <3; i++) {
 // document.write(localStorage.getItem("allEntries"));
-// }
-  		
-   document.write(localStorage.getItem("storeNews"));
+// } for (var i in servos) {
+       // console.log(servos[i].toString());
+  		//var data = JSON.parse(localStorage["data"]);
+  	
+ 
+   document.write(localStorage.getItem("result2"));
   // document.body.innerHTML = newsArticle;
 }
 }
