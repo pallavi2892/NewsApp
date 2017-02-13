@@ -2,39 +2,70 @@
 <head>
 <script type="text/javascript" src="js/saveAndRetriveNews.js">
 </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/addNews.css">
 </head>
 <body>
+<form class="form-style-7" id="localStorageTest" method="post" action="showNews.html">
+    <ul>
+        <li>
+            <label>News:</label>
+            <input type="text" name="news" id="news" class="stored" value="" maxlength="50">
+            <span>Enter your news title here</span>
+        </li>
+        <li>
 
-<form id="localStorageTest" method="post" action="showNews.html">
-    <label>News:</label>
-    <input type="text" name="news" id="news" class="stored" value="" />
-    <br><br>
-    <label>Date:</label>
-    <input type="date" name="date" id="date" class="stored" value="" />
-    <label>Reporter:</label>
+            <label>Date:</label>
+            <input type="date" name="date" id="date" class="stored" value="">
+            <span>Enter a valid  date</span>
+        </li>
+        <li>
 
-    <input type="text" name="reporter" id="reporter" class="stored" value="" />   
-    <br><br>
-    <label>Description:</label>
-    <textarea name="description" id="description" class="stored"></textarea>
-    <br><br>
-    
-    <input type="submit" class="demo-button" value="Submit"/>
+            <label>Reporter:</label>
+            <input type="text" name="reporter" id="reporter" class="stored" value="">
+            <span>Enter a reporter name</span>
+        </li>
+        <li>
+
+            <label>Description:</label>
+            <textarea name="description" id="description" class="stored"></textarea>
+            <span>News description in brief</span>
+        </li>
+        <li>
+
+            <input type="submit" class="demo-button" value="Submit">
+        </li>
+    </ul>
 </form>
 
+<!--<form id="localStorageTest" method="post" action="showNews.html">-->
+    <!--<label>News:</label>-->
+    <!--<input type="text" name="news" id="news" class="stored" value="" />-->
+    <!--<br><br>-->
+    <!--<label>Date:</label>-->
+    <!--<input type="date" name="date" id="date" class="stored" value="" />-->
+    <!--<label>Reporter:</label>-->
 
-<!--camera buttons-->
-<button id = "cameraTakePicture">TAKE PICTURE</button>
-<img id = "myImage"></img>
+    <!--<input type="text" name="reporter" id="reporter" class="stored" value="" />   -->
+    <!--<br><br>-->
+    <!--<label>Description:</label>-->
+    <!--<textarea name="description" id="description" class="stored"></textarea>-->
+    <!--<br><br>-->
+    <!---->
+    <!--<input type="submit" class="demo-button" value="Submit"/>-->
+<!--</form>-->
+
+
 
 <!--geolocation buttons-->
-<button id = "getPosition">CURRENT POSITION</button>
-<button id = "watchPosition">WATCH POSITION</button>
+<button id = "getPosition" class="button">CURRENT POSITION</button>
+<button id = "watchPosition" class="button">WATCH POSITION</button>
+
 
 <!--audio video buttons-->
-<button id = "audioCapture">AUDIO</button>
-<button id = "imageCapture">IMAGE</button>
-<button id = "videoCapture">VIDEO</button>
+<button id = "audioCapture" class="button">AUDIO</button>
+<button id = "imageCapture" class="button">IMAGE</button>
+<button id = "videoCapture" class="button">VIDEO</button>
 
 </body>
 </html>

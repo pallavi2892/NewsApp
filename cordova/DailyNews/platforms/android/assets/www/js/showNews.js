@@ -1,20 +1,21 @@
 window.onload = function() {
 	
 	if (typeof(Storage) !== "undefined") {
-    // Retrieve
-//     var allEntries = [];
-//      allEntries.push(storedNames);
- 
-   
-//     localStorage.setItem("allEntries", JSON.stringify(allEntries));
+var l = localStorage.length;
+  	for(var i=0; i<l; i++ ) {
+  	var o = localStorage.getItem(localStorage.key(i));
+  	storeNews = JSON.parse(o);
 
-// //this is for displaying on webpage
-// for (var i = storedNames.length; i <3; i++) {
-// document.write(localStorage.getItem("allEntries"));
-// }
-  		
-   document.write(localStorage.getItem("storeNews"));
-  // document.body.innerHTML = newsArticle;
+  	document.write("<strong>News: </strong>"+storeNews.news+"<br>");
+  	document.write("<strong>Date: </strong>"+storeNews.date+"<br>");
+  	document.write("<strong>Reporter: </strong>"+storeNews.reporter+"<br>");
+  	document.write("<strong>Description: </strong>"+storeNews.description+"<hr>");
+
+  	}
+
+//document.write(l);
+
+
 }
 }
 

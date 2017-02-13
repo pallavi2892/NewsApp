@@ -28,8 +28,6 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        document.getElementById("cameraTakePicture").addEventListener
-           ("click", cameraTakePicture);
     },
 
     // Update DOM on a Received Event
@@ -47,21 +45,7 @@ var app = {
 
 app.initialize();
 
-//function cameraTakePicture() {
-//   navigator.camera.getPicture(onSuccess, onFail, {
-//      quality: 50,
-//      destinationType: Camera.DestinationType.DATA_URL
-//   });
-//
-//   function onSuccess(imageData) {
-//      var image = document.getElementById('myImage');
-//      image.src = "data:image/jpeg;base64," + imageData;
-//   }
-//
-//   function onFail(message) {
-//      alert('Failed because: ' + message);
-//   }
-//}
+
 
 
     function validate() {

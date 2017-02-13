@@ -5,11 +5,13 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
         <link rel="stylesheet" type="text/css" href="css/index1.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
+
         <script type="text/javascript" src="js/index.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <meta charset="utf-8">
 
         <title>Daily News</title>
@@ -28,33 +30,51 @@
 
     </div>
 
-                        <h1>Daily News</h1>
-                        <div class="description">
-                            <p>
-                                Get all your news here and stay updated...!!
-                            </p>
-                        </div>
+    <hgroup>
+  <h1>Daily News</h1>
+  <h3>Get all your news here and stay updated..!!</h3>
+</hgroup>
+<form name="loginform" role="form" action="" method="post" class="login-form">
+  <div class="group">
+    <input type="email" id="form-username"><span class="highlight" ></span><span class="bar"></span>
+    <label>Email</label>
+  </div>
+  <div class="group">
+    <input type="password" id="form-password"><span class="highlight"  ></span><span class="bar"></span>
+    <label>Password</label>
+  </div>
+  <button type="button" class="button buttonBlue"  onclick="validate();">Submit</button>
+</form>
 
 
-                            <div class="form-top-left">
-                                <h3>Login</h3>
-                            </div>
 
-                        <div class="form-bottom">
-                            <form name="loginform" role="form" action="" method="post" class="login-form">
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-username">Email: </label> <br>
-                                    <input type="email" name="form-username" placeholder="sample@gmail.com"  id="form-username">
-                                    <br><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-password">Password: </label><br>
-                                    <input type="password" name="form-password" placeholder="Password"  id="form-password">
-                                </div>
 
-                                <input type="button" value = "Login" class="btn" onclick="validate();">
-                            </form>
-                        </div>
+
+                         <!--<h1>Daily News</h1>-->
+                        <!--<div class="description">-->
+                            <!--<p>-->
+                                <!--Get all your news here and stay updated...!!-->
+                            <!--</p>-->
+                        <!--</div>-->
+                            <!--<div class="form-top-left">-->
+                                <!--<h3>Login</h3>-->
+                            <!--</div>-->
+
+                        <!--<div class="form-bottom">-->
+                            <!--<form name="loginform" role="form" action="" method="post" class="login-form">-->
+                                <!--<div class="form-group">-->
+                                    <!--<label class="sr-only" for="form-username">Email: </label> <br>-->
+                                    <!--<input type="email" name="form-username" placeholder="sample@gmail.com"  id="form-username">-->
+                                    <!--<br><br>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label class="sr-only" for="form-password">Password: </label><br>-->
+                                    <!--<input type="password" name="form-password" placeholder="Password"  id="form-password">-->
+                                <!--</div>-->
+
+                                <!--<input type="button" value = "Login" class="btn" onclick="validate();">-->
+                            <!--</form>-->
+                        <!--</div>-->
 
 
 

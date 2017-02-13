@@ -34,10 +34,8 @@ function myFunction(xml) {
   var x = xmlDoc.getElementsByTagName("item");
   for(i = 0; i<x.length; i++) {
 
-    table += "<tr></tr><tr></tr><td align = \"center\"><br>"
-
     if(x[i].children.length>5) {
-      table += "<tr><td>" + "<img align = \"center\" src=" + x[i].children[3].attributes[0].nodeValue+"></img></td></tr>"
+      table += "<tr><td>" + "<img src=" + x[i].children[3].attributes[0].nodeValue+"></img></td></tr>"
     }
     table += "<tr><td>" + "<strong>" +
     x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</strong>" +
