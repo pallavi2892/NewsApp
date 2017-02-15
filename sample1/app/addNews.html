@@ -1,0 +1,106 @@
+<!--<!DOCTYPE html>-->
+<!--<html ng-app="myApp">-->
+
+<!--<head>-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
+    <!--<script src="./angular.js"></script>-->
+    <!--<script src="./addNewsController.js"></script>-->
+<!--</head>-->
+
+<!--<body ng-controller="addNewsController" class="container" > <br />-->
+
+<!--<form class="form-horizontal" ng-submit="submitForm()" role="form">-->
+
+    <!--<div class="form-group">-->
+        <!--<label for="news" class="col-sm-3 control-label">News</label>-->
+        <!--<div class="col-sm-6">-->
+            <!--<input type="text" id="news" class="form-control" ng-model="student.news" />-->
+        <!--</div>-->
+        <!--<div class="col-sm-3"></div>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+        <!--<label for="dob" class="col-sm-3 control-label">Date</label>-->
+        <!--<div class="col-sm-6">-->
+            <!--<input type="date" id="dob" class="form-control" ng-model="student.DoB" />-->
+        <!--</div>-->
+        <!--<div class="col-sm-7"></div>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+        <!--<label for="reporter" class="col-sm-3 control-label">Reporter</label>-->
+        <!--<div class="col-sm-6">-->
+            <!--<input type="text" id="reporter" class="form-control" ng-model="student.reporter" />-->
+        <!--</div>-->
+        <!--<div class="col-sm-3"></div>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+        <!--<label for="description" class="col-sm-3 control-label">Description</label>-->
+        <!--<div class="col-sm-6">-->
+            <!--<input type="text" id="description" class="form-control" ng-model="student.description" />-->
+        <!--</div>-->
+        <!--<div class="col-sm-3"></div>-->
+    <!--</div>-->
+
+
+
+    <!--<input type="submit" value="Save" class="btn btn-primary col-sm-offset-3" />-->
+    <!--<input type="reset" value="Reset" ng-click="resetForm()" />-->
+<!--</form>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="./angular.js"></script>
+    <!--<script src="./addNewsController.js"></script>-->
+    <script  src="js/categoryController.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+</head>
+
+<!--<body ng-controller="addNewsController" class="container" > <br />-->
+
+<body>
+<div class="container" data-ng-controller="addNewsController">
+    <header class="app-header">
+        <h1 class="app-title">{{ appTitle }}</h1>
+        <h1 class="app-headline">{{ appHeadline }}</h1>
+    </header>
+
+    <section class="app-body">
+        <section class="archive-control">
+            <span>{{ remaining() }} of {{ todos.length }} remaining</span>
+            <p>[ <a href="" data-ng-click="archive()">Remove selected news</a> ]</p>
+        </section>
+
+        <ul class="unstyled">
+            <li data-ng-repeat="todo in todos track by $index">
+                <input type="checkbox" data-ng-model="todo.done">
+                <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+            </li>
+        </ul>
+
+        <form data-ng-submit="addTodo()" class="todo-form">
+            <input type="text" data-ng-model="todoText" placeholder="Enter new ToDo item" />
+            <br />
+            <input type="submit" value="Add Task" />
+        </form>
+    </section>
+</div>
+</body>
+</html>
+
+
+
