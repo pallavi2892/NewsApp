@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.js" type="text/javascript" language="javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="jquery-1.2.6.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.xml2json.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.xml2json.pack.js" type="text/javascript" language="javascript"></script>
+<script src="testing.js" type="text/javascript" language="javascript"></script>
+
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+
+<h1>{{welcome}}</h1>
+
+</div>
+
+<!-- <p>The $http service requests a page on the server, and the response is set as the value of the "myWelcome" variable.</p> -->
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("https://rss.sciencedaily.com/all.xml")
+  .then(function(response) {
+  var xml = response.data;
+  var json = $.xml2json(xml);
+  
+  	
+
+      $scope.myWelcome = json;	
+      $scope.welcome='';
+  		for(var i=0;i<$scope.myWelcome.channel.item.length;i++){
+  			$scope.welcome+=$scope.myWelcome.channel.item[i].title;
+        $scope.welcome +=$scope.myWelcome.channel.item[i].pubDate;
+        $scope.welcome+=$scope.myWelcome.channel.item[i].description+"-------";
+  			// $scope.welcome+=$scope.myWelcome.course[i].page;
+  		}
+    //   console.log($scope.welcome.item);
+  });
+});
+</script>
+
+</body>
+</html>
