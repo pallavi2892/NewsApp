@@ -1,0 +1,43 @@
+
+
+<div class="container" data-ng-controller="addNewsController">
+    <header class="app-header">
+        <h1 class="app-title">{{ appTitle }}</h1>
+        <!--<h1 class="app-headline">{{ appHeadline }}</h1>-->
+    </header>
+
+    <section class="app-body">
+        <section class="archive-control">
+            <!--<span>{{ remaining() }} of {{ todos.length }} remaining</span>-->
+            <p>[ <a href="" data-ng-click="archive()">Remove selected news</a> ]</p>
+        </section>
+
+
+
+        <form data-ng-submit="addTodo()" class="todo-form">
+            <input type="text" data-ng-model="todoText" placeholder="News Headline" />
+            <br />
+
+            <input type="date" data-ng-model="date" placeholder="" />
+            <br />
+
+            <input type="text" data-ng-model="reporter" placeholder="Reporter name" />
+            <br />
+
+            <input type="text" data-ng-model="description" placeholder="News description" />
+            <br />
+
+            <input type="submit" value="Add News" />
+        </form>
+
+        <ul class="unstyled">
+            <li data-ng-repeat="todo in todos track by $index">
+                <br>
+                <input type="checkbox" data-ng-model="todo.done">
+                <span class="done-{{ todo.done }}">{{todo.text }}<br>
+                    Date: {{todo.date | date}}<br>Reporter: {{todo.reporter}}<br>Description: {{todo.description}}<br></span>
+            </li>
+        </ul>
+    </section>
+</div>
+
