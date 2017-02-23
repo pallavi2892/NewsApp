@@ -1,0 +1,21 @@
+<!--<div>-->
+    <!--<button ng-click="back()" class="button">Back</button>-->
+<!--</div>-->
+
+
+
+<div id="display" align="center" ng-controller="categoryController as c">
+    <button ng-click="back()" class="button">Back</button>
+    <!--<button data-ng-attr-id="btnId" class="btn btn-default" ng-repeat="k in c.getKeys()" ng-click="displayNews(btnId)">{{k}}</button>-->
+    <button class="button" ng-repeat="btn in c.getKeys()" ng-click="displayNews(btn)">{{btn}}</button>
+
+    <button ng-click="addNews()" class="button">Add News</button>
+
+
+
+</div>
+
+
+
+
+

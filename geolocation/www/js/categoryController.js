@@ -401,53 +401,73 @@ app.controller('captureCtrl', function($scope, $cordovaCapture) {
 });
 
 
-app.controller('geoController', function($scope, $cordovaGeolocation) {
+// app.controller('geoController', function($scope, $cordovaGeolocation) {
+
+// $scope.geolocation = function() {
+//    var posOptions = {timeout: 10000, enableHighAccuracy: false};
+//    $cordovaGeolocation
+//    .getCurrentPosition(posOptions)
+
+//    .then(function (position) {
+//       var lat  = position.coords.latitude
+//       var long = position.coords.longitude
+//       console.log(lat + '   ' + long)
+// //      alert("lat" + lat);
+//             var latlng = new google.maps.LatLng(lat, long);
+//                   var geocoder = geocoder = new google.maps.Geocoder();
+//                   geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+//                       if (status == google.maps.GeocoderStatus.OK) {
+//                           if (results[1]) {
+//                               alert("Location: " + results[1].formatted_address);
+//                           }
+//                       }
+//                   });
+
+//    }, function(err) {
+//       console.log(err)
+//    });
+// }
+//    var watchOptions = {timeout : 3000, enableHighAccuracy: false};
+//    var watch = $cordovaGeolocation.watchPosition(watchOptions);
+
+//    watch.then(
+//       null,
+
+//       function(err) {
+//          console.log(err)
+//       },
+
+//       function(position) {
+//          var lat  = position.coords.latitude
+//          var long = position.coords.longitude
+//          console.log(lat + '' + long)
+//       }
+//    );
+
+//    watch.clearWatch();
+
+
+
+
+
+// });
+
+
+app.controller('geoController', function($scope, $cordovaGeolocation, $http) {
 
 $scope.geolocation = function() {
-   var posOptions = {timeout: 10000, enableHighAccuracy: false};
-   $cordovaGeolocation
-   .getCurrentPosition(posOptions)
+if (navigator.geolocation) navigator.geolocation.getCurrentPosition(onPositionUpdate);
 
-   .then(function (position) {
-      var lat  = position.coords.latitude
-      var long = position.coords.longitude
-      console.log(lat + '   ' + long)
-//      alert("lat" + lat);
-            var latlng = new google.maps.LatLng(lat, long);
-                  var geocoder = geocoder = new google.maps.Geocoder();
-                  geocoder.geocode({ 'latLng': latlng }, function (results, status) {
-                      if (status == google.maps.GeocoderStatus.OK) {
-                          if (results[1]) {
-                              alert("Location: " + results[1].formatted_address);
-                          }
-                      }
-                  });
-
-   }, function(err) {
-      console.log(err)
-   });
+function onPositionUpdate(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=true";
+    $http.get(url)
+        .then(function(result) {
+            var address = result.data.results[2].formatted_address;
+            $scope.address = address;
+            alert($scope.address);
+        });
 }
-   var watchOptions = {timeout : 3000, enableHighAccuracy: false};
-   var watch = $cordovaGeolocation.watchPosition(watchOptions);
-
-   watch.then(
-      null,
-
-      function(err) {
-         console.log(err)
-      },
-
-      function(position) {
-         var lat  = position.coords.latitude
-         var long = position.coords.longitude
-         console.log(lat + '' + long)
-      }
-   );
-
-   watch.clearWatch();
-
-
-
-
-
+}
 });
