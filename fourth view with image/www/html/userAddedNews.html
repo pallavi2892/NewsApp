@@ -1,0 +1,73 @@
+
+<!--<div  data-ng-controller="userAddedNewsController">-->
+    <!--<div>-->
+        <!--<button ng-click="back()" class="button">Back</button>-->
+    <!--</div>-->
+<!--<div data-ng-repeat="todo in todos track by $index">-->
+    <!--<br>-->
+    <!--<input type="checkbox" data-ng-model="todo.done">-->
+                <!--<span class="done-{{ todo.done }}">{{todo.text }}<br>-->
+                    <!--Date: {{todo.date | date}}<br>-->
+                    <!--Reporter: {{todo.reporter}}<br>-->
+                    <!--Description: {{todo.description}}<br>-->
+                <!--</span>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<div  data-ng-controller="userAddedNewsController">
+
+        <button ng-click="back()" class="button">Back</button>
+
+    <div data-ng-repeat="todo in todos track by $index">
+        <br>
+        <fieldset>
+        <input data-ng-model="todo.done">
+                <!--<span class="done-{{ todo.done }}">-->
+                   <strong> {{todo.text }}</strong><br>
+                     {{todo.date | date}}<br>
+                    Reporter: {{todo.reporter}}<br>
+                    Description: {{todo.description}}<br>
+                   <div>  <img ng-show="todo.image" ng-src="{{todo.image}}" style="text-align: center">
+                        </div>
+                       <!--</span>-->
+         </fieldset>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--iside display-->
+<!--<div class="container" ng-controller="userNewsController">-->
+<!--<section class="archive-control">-->
+<!--&lt;!&ndash;<span>{{ remaining() }} of {{ todos.length }} remaining</span>&ndash;&gt;-->
+<!--<p>[ <a href="" data-ng-click="archive()">Remove selected news</a> ]</p>-->
+<!--</section>-->
+
+<!--<ul class="unstyled">-->
+<!--<li data-ng-repeat="todo in todos track by $index">-->
+<!--<br>-->
+<!--<input type="checkbox" data-ng-model="todo.done">-->
+<!--<span class="done-{{ todo.done }}">{{todo.text }}<br>-->
+<!--Date: {{todo.date | date}}<br>Reporter: {{todo.reporter}}<br>Description: {{todo.description}}<br></span>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
