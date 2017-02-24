@@ -1,0 +1,217 @@
+<form class="form-style-7">
+<div  ><!--data-ng-controller="addNewsController"-->
+    <header class="app-header">
+        <h1 class="app-title">{{ appTitle }}</h1>
+    </header>
+
+
+
+
+    <form class="form-style-7"><!--data-ng-submit="addTodo()-->
+        <ul>
+            <li>
+                <label>News:</label>
+                <input type="text" data-ng-model="todoText" placeholder="News" />
+            </li>
+            <li>
+                <label>Date:</label>
+                <input type="date" data-ng-model="date" placeholder="Date" />
+            </li>
+            <li>
+
+                <label>Reporter:</label>
+
+                <input type="text" data-ng-model="reporter" placeholder="Reporter" />
+
+            </li>
+            <li>
+
+                <label>Description:</label>
+                <input type="text" data-ng-model="description" placeholder="Description" />
+            </li>
+            <!--<li>-->
+
+                <!--<input type="submit" class="demo-button" value="Submit">-->
+                <!--<input class="button button-full button-assertive" ng-click="addTodo()" value="Add News" />  &lt;!&ndash;type="submit"&ndash;&gt;-->
+
+            <!--</li>-->
+        </ul>
+        <br>
+        <button class="button button-full button-assertive" ng-click="addTodo()" value="Add News">  <!--type="submit"-->
+            Add News  </button>
+        <!--<div ng-controller="cameraController">-->
+        <button class="button button-full button-assertive" ng-click="takePhoto()">
+        Take Photo
+        </button>
+        <button class="button button-full button-assertive" ng-click="choosePhoto()">
+        Choose Photo
+        </button>
+
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+        <!--</div>-->
+
+        <button class="button button-full button-assertive" ng-click="captureAudio()">
+            Capture Audio
+        </button>
+        <button class="button button-full button-assertive" ng-click="captureVideo()">
+            Capture Video
+        </button>
+
+        <button class="button button-full button-assertive" ng-click="geolocation()">
+            Geolocation
+        </button>
+
+    </form>
+
+    <button ng-click="back()" class="button">Back</button>
+
+    <button ng-click="showNews()" class="button">Show News</button>
+
+    <!--<div data-ng-repeat="todo in todos track by $index">-->
+        <!--<br>-->
+        <!--<input type="checkbox" data-ng-model="todo.done">-->
+                <!--<span class="done-{{ todo.done }}">{{todo.text }}<br>-->
+                    <!--Date: {{todo.date | date}}<br>Reporter: {{todo.reporter}}<br>Description: {{todo.description}}<br></span>-->
+    <!--</div>-->
+
+    <!--<div ng-controller="cameraController">-->
+        <!--<button class="button button-full button-assertive" ng-click="takePhoto()">-->
+            <!--Take Photo-->
+        <!--</button>-->
+        <!--<button class="button button-full button-assertive" ng-click="choosePhoto()">-->
+            <!--Choose Photo-->
+        <!--</button>-->
+
+        <!--<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">-->
+    <!--</div>-->
+
+    <!--<div ng-controller="captureController">-->
+        <!--<button class="button button-full button-assertive" ng-click="captureAudio()">-->
+            <!--Capture Audio-->
+        <!--</button>-->
+        <!--<button class="button button-full button-assertive" ng-click="captureVideo()">-->
+            <!--Capture Video-->
+        <!--</button>-->
+    <!--</div>-->
+
+    <!--<div ng-controller="geoController">-->
+        <!--<button class="button button-full button-assertive" ng-click="geolocation()">-->
+            <!--Geolocation-->
+        <!--</button>-->
+
+
+    <!--</div>-->
+
+
+
+</div>
+
+
+</form>
+
+
+
+
+
+
+
+<!--<div ng-controller="myCtrl">-->
+        <!--<button ng-click="captureAudio()" class="button">Audio</button>-->
+        <!--&lt;!&ndash;<button ng-click="captureImage()" class="button">Image</button>&ndash;&gt;-->
+        <!--<button ng-click="captureVideo()" class="button">Video</button>-->
+
+
+    <!--</div>-->
+
+    <!--<div ng-controller="cameraController">-->
+        <!--<button class="button button-full button-assertive" ng-click="takePhoto()">-->
+        <!--Take Photo-->
+        <!--</button>-->
+        <!--<button class="button button-full button-assertive" ng-click="choosePhoto()">-->
+        <!--Choose Photo-->
+        <!--</button>-->
+
+        <!--<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">-->
+    <!--</div>-->
+
+
+
+
+    <!--<button class="button button-calm button-full"-->
+            <!--ng-click="captureVideo()">Capture Video</button>-->
+
+
+    <!--<button class="button button-full button-assertive" ng-click="takePhoto()">-->
+        <!--Take Photo-->
+    <!--</button>-->
+    <!--<button class="button button-full button-assertive" ng-click="choosePhoto()">-->
+        <!--Choose Photo-->
+    <!--</button>-->
+
+    <!--<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">-->
+
+    <!--<cordova-video src="data.videoPath"></cordova-video>-->
+
+    <!--<button class="button button-full button-energized" ng-click="vmwhere()">Where am I?</button>-->
+
+
+<!--<div>-->
+    <!--<button class="button button-full button-assertive" ng-click="takeAudio()">-->
+    <!--Audio-->
+    <!--</button>-->
+    <!--<button class="button button-full button-assertive" ng-click="takeVideo()">-->
+    <!--Video-->
+    <!--</button>-->
+    <!--<button class="button button-full button-assertive" ng-click="takeImage()">-->
+        <!--Image-->
+    <!--</button>-->
+
+    <!--<button class="button button-full button-assertive" ng-click="geolocation()">-->
+        <!--Geolocation-->
+    <!--</button>-->
+
+<!--</div>-->
+
+
+
+
+<!--<div class="container" data-ng-controller="addNewsController">-->
+<!--<header class="app-header">-->
+<!--<h1 class="app-title">{{ appTitle }}</h1>-->
+<!--&lt;!&ndash;<h1 class="app-headline">{{ appHeadline }}</h1>&ndash;&gt;-->
+<!--</header>-->
+
+<!--<section class="app-body">-->
+<!--<section class="archive-control">-->
+<!--&lt;!&ndash;<span>{{ remaining() }} of {{ todos.length }} remaining</span>&ndash;&gt;-->
+<!--<p>[ <a href="" data-ng-click="archive()">Remove selected news</a> ]</p>-->
+<!--</section>-->
+
+
+
+<!--<form data-ng-submit="addTodo()" class="todo-form">-->
+<!--<input type="text" data-ng-model="todoText" placeholder="News Headline" />-->
+<!--<br />-->
+
+<!--<input type="date" data-ng-model="date" placeholder="Date" />-->
+<!--<br />-->
+
+<!--<input type="text" data-ng-model="reporter" placeholder="Reporter name" />-->
+<!--<br />-->
+
+<!--<input type="text" data-ng-model="description" placeholder="News description" />-->
+<!--<br />-->
+
+<!--<input type="submit" value="Add News" />-->
+<!--</form>-->
+
+<!--<ul class="unstyled">-->
+<!--<li data-ng-repeat="todo in todos track by $index">-->
+<!--<br>-->
+<!--<input type="checkbox" data-ng-model="todo.done">-->
+<!--<span class="done-{{ todo.done }}">{{todo.text }}<br>-->
+<!--Date: {{todo.date | date}}<br>Reporter: {{todo.reporter}}<br>Description: {{todo.description}}<br></span>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</section>-->
+<!--</div>-->

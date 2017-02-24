@@ -1,0 +1,45 @@
+
+<!--<div id="display" align="center" ng-controller="categoryController as c">-->
+    <!--&lt;!&ndash;<button ng-click="back()" class="button">Back</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button data-ng-attr-id="btnId" class="btn btn-default" ng-repeat="k in c.getKeys()" ng-click="displayNews(btnId)">{{k}}</button>&ndash;&gt;-->
+    <!--<button class="button" ng-repeat="btn in c.getKeys()" ng-click="displayNews(btn)">{{btn}}</button>-->
+
+    <!--<button ng-click="addNews()" class="button">Add News</button>-->
+
+
+
+<!--</div>-->
+
+
+
+
+
+<form class="form-style-7">
+<div id="display" align="center" ng-controller="categoryController as c">
+    <!--<button ng-click="back()" class="button">Back</button>-->
+    <!--<button data-ng-attr-id="btnId" class="btn btn-default" ng-repeat="k in c.getKeys()" ng-click="displayNews(btnId)">{{k}}</button>-->
+    <button class="button" ng-repeat="btn in c.getKeys()" ng-click="displayNews(btn)">{{btn}}</button>
+
+    <button ng-click="addNews()" class="button">Add News</button>
+</div>
+
+</form>
+
+
+<!--@media (max-width: 768px) {-->
+<!--.btn-responsive {-->
+<!--padding:2px 4px;-->
+<!--font-size:80%;-->
+<!--line-height: 1;-->
+<!--}-->
+<!--}-->
+
+<!--@media (min-width: 769px) and (max-width: 992px) {-->
+<!--.btn-responsive {-->
+<!--padding:4px 9px;-->
+<!--font-size:90%;-->
+<!--line-height: 1.2;-->
+<!--}-->
+<!--}-->
+
+<!--background: url(../img/banner1.jpg) no-repeat;-->

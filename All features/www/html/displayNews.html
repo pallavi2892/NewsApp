@@ -1,0 +1,83 @@
+
+<!--{{ welcome}}-->
+    <!--{{myWelcome}}-->
+    <!--{{myWelcome.channel.item[0].title}}-->
+    <!--inside displayNews-->
+<form class="form-style-7">
+<div ng-hide="online" >Check your internet connection</div>
+<div>
+<button ng-click="back()" class="button">Back</button>
+</div>
+<div ng-repeat="newsArticle in myWelcome.channel.item" >
+    <fieldset >
+    <div class="row">
+        <div><strong>{{newsArticle.title}}</strong></div>
+        <div>{{newsArticle.pubDate}}</div><br>
+        <div ng-if="newsArticle.thumbnail" align="center">
+            <div> <img src="{{newsArticle.thumbnail.url}}" width="80%" height="80%">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+        <div>{{newsArticle.description}}</div>
+
+        </div>
+<!--<br><hr>-->
+    </div>
+        <br>
+        </fieldset>
+    <fieldset>
+        </fieldset>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div ng-repeat="x in myWelcome.channel.item">-->
+    <!--<div class="row">-->
+        <!--<div><strong>{{x.title}}</strong></div>-->
+        <!--<div>{{x.pubDate}}</div>-->
+        <!--<div>{{x.description}}</div>-->
+        <!--<div ng-if="x.thumbnail">-->
+            <!--<div> <img src="{{x.thumbnail.url}}" width="100" height="50%">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<br><hr>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div ng-controller="newsDisplayCtrl">-->
+    <!--<ul>-->
+        <!--<li ng-repeat="x in welcome">{{welcome}}</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+
+<!--$scope.welcome += $scope.myWelcome.channel.item[i].title;-->
+<!--$scope.welcome += $scope.myWelcome.channel.item[i].pubDate;-->
+<!--$scope.welcome += $scope.myWelcome.channel.item[i].description + "&#45;&#45;&#45;&#45;&#45;&#45;";-->
+<!--$scope.image += $scope.myWelcome.channel.item[i].media + "-&#45;&#45;&#45;&#45;&#45;&#45;";-->
