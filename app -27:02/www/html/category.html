@@ -1,0 +1,57 @@
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+        <!--</div>-->
+        <!--<ul class="nav navbar-nav">-->
+            <!--<li class="active"><a href="/">Back</a></li>-->
+            <!--&lt;!&ndash;<li><a href="#">Page 1</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="#">Page 2</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="#">Page 3</a></li>&ndash;&gt;-->
+        <!--</ul>-->
+
+        <!--<button ng-click="addNews()" class="button">Add News</button>-->
+    <!--</div>-->
+<!--</nav>-->
+
+
+    <!--<div class="well sidebar-nav" ng-app="navList">-->
+        <!--<ul class="nav nav-list" ng-controller="navCtrl">-->
+            <!--<li ng-class="navClass('home')"><a href='#/home'>Home</a></li>-->
+            <!--<li ng-class="navClass('about')"><a href='#/about'>About Us</a></li>-->
+            <!--<li ng-class="navClass('contact')"><a href='#/contact'>Contact Us</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+    <!--<nav class="navbar navbar-default">-->
+        <!--<div class="container">-->
+            <!--<div class="navbar-header">-->
+                <!--<a class="navbar-brand" href="/">Angular Routing Example</a>-->
+            <!--</div>-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#"><i class="fa fa-home"></i> Home</a></li>-->
+                <!--<li><a href="#login"><i class="fa fa-shield"></i> login</a></li>-->
+                <!--<li><a href="#userAddedNews"><i class="fa fa-comment"></i> addnews</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</nav>-->
+
+<!--<ul>-->
+    <!--<li><a class="active" href="#home">Home</a></li>-->
+    <!--<li><a ><button ng-click="addNews()" class="button">Add News</button></a></li>-->
+    <!--<li><a href="#contact">Contact</a></li>-->
+    <!--<li><a href="#about">About</a></li>-->
+<!--</ul>-->
+
+
+<form class="form-style-7">
+<div id="display" align="center" ng-controller="categoryController as c">
+
+    <button class="button" ng-repeat="btn in c.getKeys()" ng-click="displayNews(btn)">{{btn}}</button>
+
+    <button ng-click="addNews()" class="button">Add News</button>
+</div>
+
+</form>
+
