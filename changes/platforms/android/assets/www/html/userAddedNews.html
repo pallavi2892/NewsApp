@@ -1,0 +1,62 @@
+
+<div  data-ng-controller="userAddedNewsController">
+
+        <button ng-click="back()" class="button">Back</button>
+
+    <div data-ng-repeat="todo in todos track by $index">
+        <br>
+        <fieldset>
+                   <strong> {{todo.text }}</strong><br>
+                     {{todo.date | date}}<br>
+                    By:  {{todo.reporter}}<br>
+                    Place:  {{todo.addressofuser}}<br>
+                    Description: {{todo.description}}<br><br>
+
+                   <div>  <img ng-show="todo.image" ng-src="{{todo.image}}" width="320" height="240">
+                        </div> <br>
+                    <div ng-if="todo.recordAudio"> <audio controls="controls" preload="none">
+                      Audio file:  <source type="audio/mpeg" src="{{todo.recordAudio}}"/>
+                    </audio>
+                    </div>
+            <br>
+            <div ng-if="todo.recordVideo" ng-video>
+            <video width="320" height="240" controls>
+               Video file: <source  type="video/mp4" ng-src="{{todo.recordVideo}}">
+            </video>
+            </div>
+         </fieldset>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--iside display-->
+<!--<div class="container" ng-controller="userNewsController">-->
+<!--<section class="archive-control">-->
+<!--&lt;!&ndash;<span>{{ remaining() }} of {{ todos.length }} remaining</span>&ndash;&gt;-->
+<!--<p>[ <a href="" data-ng-click="archive()">Remove selected news</a> ]</p>-->
+<!--</section>-->
+
+<!--<ul class="unstyled">-->
+<!--<li data-ng-repeat="todo in todos track by $index">-->
+<!--<br>-->
+<!--<input type="checkbox" data-ng-model="todo.done">-->
+<!--<span class="done-{{ todo.done }}">{{todo.text }}<br>-->
+<!--Date: {{todo.date | date}}<br>Reporter: {{todo.reporter}}<br>Description: {{todo.description}}<br></span>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->

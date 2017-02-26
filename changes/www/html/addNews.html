@@ -1,0 +1,63 @@
+<form class="form-style-7">
+    <div  ><!--data-ng-controller="addNewsController"-->
+    <header class="app-header">
+        <h1 class="app-title">{{ appTitle }}</h1>
+    </header>
+
+
+    <form class="form-style-7"><!--data-ng-submit="addTodo()-->
+        <ul>
+            <li>
+                <label>News:</label>
+                <input type="text" data-ng-model="todoText" placeholder="News" />
+            </li>
+            <li>
+                <label>Date:</label>
+                <input type="date" data-ng-model="date" placeholder="Date" />
+            </li>
+            <li>
+
+                <label>Reporter:</label>
+
+                <input type="text" data-ng-model="reporter" placeholder="Reporter" />
+
+            </li>
+            <li>
+
+                <label>Description:</label>
+                <input type="text" data-ng-model="description" placeholder="Description" />
+            </li>
+        </ul>
+        <br>
+        <button class="button button-full button-assertive" ng-click="addTodo()" value="Add News">  <!--type="submit"-->
+            Add News  </button>
+
+        <!--<div ng-controller="cameraController">-->
+        <button class="button button-full button-assertive" ng-click="takePhoto()">
+        Take Photo
+        </button>
+        <button class="button button-full button-assertive" ng-click="choosePhoto()">
+        Choose Photo
+        </button>
+
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+
+        <button class="button button-full button-assertive" ng-click="captureAudio()">
+            Capture Audio
+        </button>
+        <button class="button button-full button-assertive" ng-click="captureVideo()">
+            Capture Video
+        </button>
+
+        <button class="button button-full button-assertive" ng-click="geolocation()">
+            Geolocation
+        </button>
+
+    </form>
+
+    <button ng-click="back()" class="button">Back</button>
+
+    <button ng-click="showNews()" class="button">Show News</button>
+
+</div>
+</form>

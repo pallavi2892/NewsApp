@@ -1,0 +1,10 @@
+
+<form class="form-style-7">
+<div id="display" align="center" ng-controller="categoryController as c">
+    <button class="button" ng-repeat="btn in c.getKeys()" ng-click="displayNews(btn)">{{btn}}</button>
+
+    <button ng-click="addNews()" class="button">Add News</button>
+</div>
+
+</form>
+
